@@ -1,4 +1,6 @@
 <?php
+Namespace Principal;
+
 	class Lance {
 		private $usuario;
 		private $valor;

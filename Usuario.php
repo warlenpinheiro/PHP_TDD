@@ -1,4 +1,6 @@
 <?php
+Namespace Principal;
+
 	class Usuario {
 		private $id;
 		private $nome;

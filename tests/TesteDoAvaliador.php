@@ -1,10 +1,11 @@
 <?php
-require "../Usuario.php";
-require "../Lance.php";
-require "../Leilao.php";
-require "../Avaliador.php";
+    use PHPUnit\Framework\TestCase;
+    use Principal\Usuario;
+    use Principal\Avaliador;
+    use Principal\Leilao;
+    use Principal\Lance;
 
-    class TesteDoAvaliador extends PHPUnit_Framework_TestCase {
+    class TesteDoAvaliador extends TestCase {
 
         public function testAceitaLeilaoEmOrdemCrescente() {
 
@@ -90,7 +91,17 @@ require "../Avaliador.php";
             $this->assertEquals(3, count($maiores));
             $this->assertEquals(400, $maiores[0]->getValor());
             $this->assertEquals(300, $maiores[1]->getValor());
-            $this->assertEquals(200, $maiores[2]->getValor());
+            $this->assertEquals(250, $maiores[2]->getValor());
 
+        }
+
+        /**
+        *
+        * @expectedException PHPUnit\Framework\Error\Error
+        *
+        */
+
+        public function testaFalhaNoInclude(){
+            include 'config.php';
         }
     }

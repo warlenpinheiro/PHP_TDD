@@ -1,4 +1,6 @@
 <?php
+Namespace Principal;
+
 	class Leilao {
 		private $descricao;
 		private $lances;

@@ -1,4 +1,6 @@
 <?php
+Namespace Principal;
+
 class Avaliador {
 
         private $maiorDeTodos = -INF;
