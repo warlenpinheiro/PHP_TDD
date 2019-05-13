@@ -105,5 +105,13 @@
             $this->assertContainsOnly('string', $testArray);
         }
 
+        public function hasAttribute(){
+            $this->classHasAttribute('$maiores', Avaliador::class);
+        }
+
+        public function testRegex(){
+            $this->assertRegExp('/^[a-z]{3}$/', 'opa');
+        }
+
         
     }
