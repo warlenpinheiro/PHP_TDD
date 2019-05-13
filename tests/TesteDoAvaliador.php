@@ -88,20 +88,22 @@
 
             $maiores = $leiloeiro->getTresMaiores();
 
-            $this->assertEquals(3, count($maiores));
+            $this->assertCount(3, $maiores);
             $this->assertEquals(400, $maiores[0]->getValor());
             $this->assertEquals(300, $maiores[1]->getValor());
             $this->assertEquals(250, $maiores[2]->getValor());
 
         }
 
-        /**
-        *
-        * @expectedException PHPUnit\Framework\Error\Error
-        *
-        */
+        public function testArray(){
 
-        public function testaFalhaNoInclude(){
-            include 'config.php';
+            $testArray = array();
+            $this->assertEmpty($testArray);
+            $testArray = array('nome' => 'Warlen');
+            $this->assertArrayHasKey('nome', $testArray);
+            $this->assertContains('Warlen', $testArray);
+            $this->assertContainsOnly('string', $testArray);
         }
+
+        
     }
